@@ -45,8 +45,8 @@ commands:
         isDefault: true
 
 projects:
-  - name: my-flask-app
+  - name: flask-app
     git:
       remotes:
         origin: https://github.com/borishager2/devfile.git
-    destination: /samples/python-flask
+    destination: /projects
