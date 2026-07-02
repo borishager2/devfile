@@ -1,1 +1,14 @@
-xxxx
+apiVersion: devfile.io/v2alpha2
+kind: DevfileRegistry
+metadata:
+  name: devfile-registry
+spec:
+  samples:
+    - name: python-flask
+      url: https://raw.githubusercontent.com/your-org/my-devfile-registry/main/samples/python-flask/devfile.yaml
+      displayName: Python Flask App
+      description: A simple Flask app with Python 3.10
+      icon: https://raw.githubusercontent.com/your-org/my-devfile-registry/main/samples/python-flask/icon.svg
+      tags:
+        - python
+        - flask
