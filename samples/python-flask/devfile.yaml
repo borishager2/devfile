@@ -1,0 +1,52 @@
+schemaVersion: 2.2.0
+metadata:
+  name: my-python-flask-sample
+  displayName: My Python Flask App
+  description: A simple Flask application with Python 3.10
+  icon: https://raw.githubusercontent.com/devfile/registry/main/samples/python-flask/icon.svg
+  language: python
+  tags:
+    - python
+    - flask
+    - web
+
+components:
+  - name: python
+    container:
+      image: registry.redhat.io/rhel8/python-310:1
+      memoryLimit: 1Gi
+      mountSources: true
+      endpoints:
+        - name: http-5000
+          port: 5000
+          exposure: public
+          protocol: http
+      command:
+        - /bin/sh
+        - -c
+        - |
+          pip install flask
+          python app.py
+
+  - name: editor
+    vscode:
+      extensions:
+        - ms-python.python
+        - ms-python.vscode-pylance
+
+commands:
+  - id: run
+    exec:
+      component: python
+      commandLine: python app.py
+      workingDir: /projects
+      group:
+        kind: run
+        isDefault: true
+
+projects:
+  - name: my-flask-app
+    git:
+      remotes:
+        origin: https://github.com/your-org/my-flask-sample.git
+    destination: /projects/my-flask-app
