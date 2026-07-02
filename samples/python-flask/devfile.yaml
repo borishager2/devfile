@@ -3,7 +3,7 @@ metadata:
   name: python-flask-sample
   displayName: Python Flask App
   description: A simple Flask application with Python 3.10
-  icon: https://raw.githubusercontent.com/borishager2/devfile/main/samples/python-flask/icon.svg
+  # icon: https://raw.githubusercontent.com/borishager2/devfile/main/samples/python-flask/icon.svg
   language: python
   tags:
     - python
