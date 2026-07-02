@@ -1,9 +1,9 @@
 schemaVersion: 2.2.0
 metadata:
-  name: my-python-flask-sample
-  displayName: My Python Flask App
+  name: python-flask-sample
+  displayName: Python Flask App
   description: A simple Flask application with Python 3.10
-  icon: https://raw.githubusercontent.com/devfile/registry/main/samples/python-flask/icon.svg
+  icon: https://raw.githubusercontent.com/borishager2/devfile/main/samples/python-flask/icon.svg
   language: python
   tags:
     - python
@@ -48,5 +48,5 @@ projects:
   - name: my-flask-app
     git:
       remotes:
-        origin: https://github.com/your-org/my-flask-sample.git
-    destination: /projects/my-flask-app
+        origin: https://github.com/borishager2/devfile.git
+    destination: /samples/python-flask
